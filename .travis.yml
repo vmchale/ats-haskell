@@ -1,0 +1,45 @@
+---
+sudo: required
+cache:
+  directories:
+    - $HOME/.ghc
+    - $HOME/.cabal
+    - /usr/local/lib/ats2-postiats-0.3.8/
+    - /usr/local/bin
+    - $HOME/.atspkg
+addons:
+  apt:
+    packages:
+      libgmp3-dev
+matrix:
+  include:
+
+    - language: python
+      addons:
+        apt:
+          packages:
+            - cabal-install-head
+            - ghc-8.2.2
+          sources:
+            - hvr-ghc
+
+before_install:
+  - export PATH=/opt/ghc/bin:$PATH
+  - cabal update
+  - pip install yamllint
+
+install:
+  - cabal new-build --dependencies-only
+  - curl -sSl https://raw.githubusercontent.com/vmchale/atspkg/master/bash/install.sh | bash -s
+  - atspkg -v
+
+script:
+  - pip install yamllint
+  - yamllint .travis.yml
+  - yamllint .stylish-haskell.yaml
+  - yamllint .hlint.yaml
+  - yamllint .yamllint
+  - curl -sL https://raw.githubusercontent.com/vmchale/tomlcheck/master/sh/check | sh -s .atsfmt.toml
+  - atspkg build
+  - cabal new-build
+  - cabal new-test
