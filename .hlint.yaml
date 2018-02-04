@@ -13,3 +13,5 @@
 - error: {lhs: "concatMap", rhs: "(=<<)", name: "Generalize concatMap"}
 - error: {lhs: "f >> pure ()", rhs: "void f", name: "Use void"}
 - error: {lhs: "const f", rhs: "pure f", name: "Generalize const"}
+
+- ignore: {name: Use camelCase}

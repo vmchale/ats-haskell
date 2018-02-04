@@ -1,0 +1,11 @@
+name: {{ project }}
+version: 0.1.0.0
+cabal-version: >= 1.2
+build-type: Simple
+
+library
+  build-depends: base < 5
+               , gstorable
+  exposed-modules: {{ Project }}
+  hs-source-dirs: .
+  ghc-options: -Wall -Werror -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat
