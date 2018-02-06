@@ -5,7 +5,7 @@ build-type: Simple
 
 library
   build-depends: base < 5
-               , gstorable
+               , ats-storable
   exposed-modules: {{ Project }}
   hs-source-dirs: .
   ghc-options: -Wall -Werror -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat
