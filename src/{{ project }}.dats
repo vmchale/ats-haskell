@@ -3,7 +3,7 @@
 #define STG_INIT __stginit_{{ Project }}
 %}
 
-#include "$PATSHOMELOCS/hs-bind-0.4.1/runtime.dats"
+#include "$PATSHOMELOCS/hs-bind-0.4.2/runtime.dats"
 
 extern
 fun hs_hello_world() : void =
