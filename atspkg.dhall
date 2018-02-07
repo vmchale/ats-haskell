@@ -14,5 +14,5 @@ in pkg //
     ]
     , dependencies = [ https://raw.githubusercontent.com/vmchale/hs-bind/master/pkg.dhall ]
     , ccompiler = "ghc-8.2.2"
-    , cflags = ["-package-db", "hs/dist-newstyle/packagedb/ghc-8.2.2/", "-optc-O2", "-optc-flto", "-optc-mtune=native", "hs/{{ ProjectCamelCase }}"]
+    , cflags = ["-optc-O2", "-optc-flto", "-optc-mtune=native", "hs/{{ ProjectCamelCase }}"]
   }
