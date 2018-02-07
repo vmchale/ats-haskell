@@ -5,7 +5,7 @@ with_readme = true
 directories = ["src", "hs"]
 templates = [ "src/{{ project }}.dats"
             , "hs/{{ project }}.cabal"
-            , "hs/{{ Project }}.hs"
+            , "hs/{{ ProjectCamelCase }}.hs"
             , ".travis.yml"
             , ".stylish-haskell.yaml"
             , ".hlint.yaml"

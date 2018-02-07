@@ -8,11 +8,11 @@ in pkg //
       dbin //
       { src = "src/{{ project }}.dats"
       , target = "target/{{ project }}"
-      , hsDeps = [ { cabalFile = "hs/{{ project }}.cabal", objectFile = "hs/{{ Project }}.o" } ]
-      , hs2ats = [ { hs = "hs/{{ Project }}.hs", ats = ".atspkg/hs2ats/gen.sats" } ]
+      , hsDeps = [ { cabalFile = "hs/{{ project }}.cabal", objectFile = "hs/{{ ProjectCamelCase }}.o" } ]
+      , hs2ats = [ { hs = "hs/{{ ProjectCamelCase }}.hs", ats = ".atspkg/hs2ats/gen.sats" } ]
       }
     ]
     , dependencies = [ https://raw.githubusercontent.com/vmchale/hs-bind/master/pkg.dhall ]
     , ccompiler = "ghc-8.2.2"
-    , cflags = ["-package-db", "hs/dist-newstyle/packagedb/ghc-8.2.2/", "-optc-O2", "-optc-flto", "-optc-mtune=native", "hs/{{ Project }}"]
+    , cflags = ["-package-db", "hs/dist-newstyle/packagedb/ghc-8.2.2/", "-optc-O2", "-optc-flto", "-optc-mtune=native", "hs/{{ ProjectCamelCase }}"]
   }

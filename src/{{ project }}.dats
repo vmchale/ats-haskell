@@ -1,9 +1,9 @@
 %{^
-#define STUB_H "hs/{{ Project }}_stub.h"
-#define STG_INIT __stginit_{{ Project }}
+#define STUB_H "hs/{{ ProjectCamelCase }}_stub.h"
+#define STG_INIT __stginit_{{ ProjectCamelCase }}
 %}
 
-#include "$PATSHOMELOCS/hs-bind-0.4.2/runtime.dats"
+#include "$PATSHOMELOCS/hs-bind-0.4.1/runtime.dats"
 
 extern
 fun hs_hello_world() : void =

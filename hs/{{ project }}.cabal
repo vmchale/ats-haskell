@@ -6,6 +6,6 @@ build-type: Simple
 library
   build-depends: base < 5
                , ats-storable
-  exposed-modules: {{ Project }}
+  exposed-modules: {{ ProjectCamelCase }}
   hs-source-dirs: .
   ghc-options: -Wall -Werror -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat
