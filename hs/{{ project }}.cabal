@@ -8,4 +8,4 @@ library
                , ats-storable
   exposed-modules: {{ ProjectCamelCase }}
   hs-source-dirs: .
-  ghc-options: -Wall -O2 -Werror -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat
+  ghc-options: -Wall -Werror -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat

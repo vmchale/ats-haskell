@@ -13,6 +13,6 @@ in pkg //
       }
     ]
     , dependencies = [ "hs-bind" ]
-    , ccompiler = "ghc"
+    , ccompiler = "ghc-8.2.2"
     , cflags = ["-optc-O2", "-optc-flto", "-optc-mtune=native", "hs/{{ ProjectCamelCase }}"]
   }
