@@ -8,7 +8,7 @@ in pkg //
       dbin //
       { src = "src/{{ project }}.dats"
       , target = "target/{{ project }}"
-      , hsDeps = [ { cabalFile = "hs/{{ project }}.cabal", objectFile = "hs/{{ ProjectCamelCase }}.o" } ]
+      , hsDeps = [ { cabalFile = "hs/{{ project }}.cabal", objectFile = "hs/{{ ProjectCamelCase }}.o", projectFile = ([] : Optional Text) } ]
       , hs2ats = [ { hs = "hs/{{ ProjectCamelCase }}.hs", ats = ".atspkg/hs2ats/gen.sats" } ]
       }
     ]
