@@ -12,7 +12,7 @@ in pkg //
       , hs2ats = [ { hs = "hs/{{ ProjectCamelCase }}.hs", ats = ".atspkg/hs2ats/gen.sats" } ]
       }
     ]
-    , dependencies = [ https://raw.githubusercontent.com/vmchale/hs-bind/master/pkg.dhall ]
+    , dependencies = [ "hs-bind" ]
     , ccompiler = "ghc-8.2.2"
     , cflags = ["-optc-O2", "-optc-flto", "-optc-mtune=native", "hs/{{ ProjectCamelCase }}"]
   }
