@@ -9,7 +9,7 @@ in pkg //
       { src = "src/{{ project }}.dats"
       , target = "target/{{ project }}"
       , hsDeps = [ { cabalFile = "hs/{{ project }}.cabal", objectFile = "hs/{{ ProjectCamelCase }}.o", projectFile = ([] : Optional Text) } ]
-      , hs2ats = [ { hs = "hs/{{ ProjectCamelCase }}.hs", ats = ".atspkg/hs2ats/gen.sats" } ]
+      , hs2ats = [ { hs = "hs/{{ ProjectCamelCase }}.hs", ats = ".atspkg/hs2ats/gen.sats", cpphs = False } ]
       }
     ]
     , dependencies = [ "hs-bind" ]
