@@ -14,7 +14,6 @@ templates = [ "src/{{ project }}.dats"
             , ".ctags"
             , ".atsfmt.toml"
             , "atspkg.dhall"
-            , "cabal.project.local"
             ]
 
 [config]
