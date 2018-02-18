@@ -1,5 +1,4 @@
 let prelude = https://raw.githubusercontent.com/vmchale/atspkg/master/dhall/atspkg-prelude.dhall
-in
 
 in prelude.default //
   { bin =
