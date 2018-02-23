@@ -15,3 +15,6 @@
 - error: {lhs: "const f", rhs: "pure f", name: "Generalize const"}
 
 - ignore: {name: Use camelCase}
+
+- fixity: infixr 3 ***
+- fixity: infixr 3 &&&
