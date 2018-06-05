@@ -1,9 +1,9 @@
 let prelude = https://raw.githubusercontent.com/vmchale/atspkg/master/ats-pkg/dhall/atspkg-prelude.dhall
 
-in prelude.default //
+in prelude.default ⫽
   { bin =
     [
-      prelude.bin //
+      prelude.bin ⫽
       { src = "src/{{ project }}.dats"
       , target = "target/{{ project }}"
       , hsDeps = [ { cabalFile = "hs/{{ project }}.cabal", objectFile = "hs/{{ ProjectCamelCase }}.o", projectFile = ([] : Optional Text) } ]
@@ -11,6 +11,6 @@ in prelude.default //
       }
     ]
     , dependencies = prelude.mapPlainDeps [ "hs-bind" ]
-    , ccompiler = "ghc-8.2.2"
+    , ccompiler = "ghc"
     , cflags = ["-optc-O2", "-optc-flto", "-optc-mtune=native", "hs/{{ ProjectCamelCase }}"]
   }
